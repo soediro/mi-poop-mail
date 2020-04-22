@@ -52,7 +52,7 @@ cd ..
 rm -rf gsutil-${gsutil_version}  gsutil-${gsutil_version}.tar.gz
 
 # Get acmetool for Let's Encrypt certificates
-acmetool_version=v0.0.59
+acmetool_version=v0.0.63
 curl -LO https://github.com/hlandau/acme/releases/download/${acmetool_version}/acmetool-${acmetool_version}-solaris_amd64.tar.gz && tar xvzf acmetool-${acmetool_version}-solaris_amd64.tar.gz
 cd acmetool-${acmetool_version}-solaris_amd64
 cp bin/acmetool /opt/local/bin/acmetool.real
