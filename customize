@@ -42,6 +42,8 @@ echo "* Copy mailer.conf to /etc/ because of exim usage"
 cp /opt/local/share/examples/exim/mailer.conf /etc/
 
 # Install gsutil for backing up to google cloud storage
+export CFLAGS=-Qunused-arguments
+export CPPFLAGS=-Qunused-arguments
 gsutil_version=4.26
 # Python apparenty can't be trusted to not fuck up their URLs so use Debian's redirector service. Thanks Debian.
 curl -LO http://pypi.debian.net/gsutil/gsutil-${gsutil_version}.tar.gz && tar xvzf gsutil-${gsutil_version}.tar.gz
